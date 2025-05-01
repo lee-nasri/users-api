@@ -1,0 +1,49 @@
+# Project structure
+
+```
+- tasks-api/
+	- cmd/                			# Cobra commands
+		- root.go          			# Root command
+		- api.go           			# API command
+	- config/		  				# Configuration files
+		- config.go
+		- config_test.go
+	- docs/		  					# Documentation files
+		- docs.go
+		- swagger.json
+		- swagger.yaml
+	- domain/            			# Entities or core business logic
+	- internal/
+		- repository/        		# Interfaces for data access
+			- redis/      			# Redis repository implementation
+				- redis.go			# Redis connection. 
+				- redis_test.go		# Redis connection.
+				- users.go
+			- mysql/      			# MySQL repository implementation
+			- mongo/      			# MongoDB repository implementation
+		- rest
+			- rest.go
+			- /users
+				- create_user.go
+				- get_user.go
+				- update_user.go
+				- delete_user.go
+				- get_all_users.go
+	- mocks/		  				# Mock implementations for testing
+	- pkg/		  					# Utility packages
+		- apperror/
+			- code.go
+			- apperror.go
+		- helpers/
+	- service/
+		- users/
+			- create_user.go
+			- get_user.go
+			- update_user.go
+			- delete_user.go
+			- get_all_users.go
+	- main.go            # Application entry point
+	- go.mod             # Go module file
+	- go.sum             # Go dependencies
+	- LICENSE            # License file
+```
