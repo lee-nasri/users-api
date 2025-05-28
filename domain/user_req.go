@@ -6,6 +6,10 @@ type CreateUserRequest struct {
 	Age      string `json:"age" validate:"required"`
 	Email    string `json:"email" validate:"required,email"`
 	Phone    string `json:"phone" validate:"required"`
+
+	// New Fields
+	FatherName string `json:"father_name,omitempty" validate:"omitempty"`
+	MotherName string `json:"mother_name,omitempty" validate:"omitempty"`
 }
 
 type UpdateUserRequest struct {
@@ -14,4 +18,8 @@ type UpdateUserRequest struct {
 	Age      *string `json:"age" validate:"omitempty"`
 	Email    *string `json:"email" validate:"omitempty,email"`
 	Phone    *string `json:"phone" validate:"omitempty"`
+
+	// New Fields
+	FatherName *string `json:"father_name,omitempty" validate:"omitempty"`
+	MotherName *string `json:"mother_name,omitempty" validate:"omitempty"`
 }

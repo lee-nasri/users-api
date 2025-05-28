@@ -30,4 +30,8 @@ type UserResponse struct {
 	Phone     string `json:"phone"`
 	CreatedAt int64  `json:"created_at"`
 	UpdatedAt *int64 `json:"updated_at,omitempty"`
+
+	// New Fields
+	FatherName string `json:"father_name,omitempty" validate:"omitempty"`
+	MotherName string `json:"mother_name,omitempty" validate:"omitempty"`
 }

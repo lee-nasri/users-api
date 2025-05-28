@@ -49,5 +49,14 @@ func parseValue(userData domain.User, input domain.UpdateUserRequest) *domain.Us
 		userData.Phone = *input.Phone
 	}
 
+	// New Fields
+	if input.FatherName != nil {
+		userData.FatherName = *input.FatherName
+	}
+
+	if input.MotherName != nil {
+		userData.MotherName = *input.MotherName
+	}
+
 	return &userData
 }

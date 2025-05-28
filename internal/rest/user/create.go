@@ -39,6 +39,10 @@ func (h *Handler) CreateUser(ctx echo.Context) error {
 			Phone:     res.Phone,
 			CreatedAt: res.CreatedAt,
 			UpdatedAt: res.UpdatedAt,
+
+			// New Fields
+			FatherName: res.FatherName,
+			MotherName: res.MotherName,
 		},
 	})
 

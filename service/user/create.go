@@ -52,6 +52,10 @@ func (s *Service) CreateUser(ctx context.Context, input domain.CreateUserRequest
 		Age:      input.Age,
 		Email:    input.Email,
 		Phone:    input.Phone,
+
+		// New Fields
+		FatherName: input.FatherName,
+		MotherName: input.MotherName,
 	})
 
 	if err != nil {
